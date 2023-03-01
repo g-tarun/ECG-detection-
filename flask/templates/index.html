@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<style>
+body{
+    background-image: url('static/giphy.gif');
+    background-size: 1700px,907px;
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    opacity: 10px;
+}
+.navbar
+{
+margin: 0px;
+padding:20px;
+background-color:white;
+opacity:0.6;
+color:yellow;
+font-family:'Roboto',sans-serif;
+font-style: italic;
+border-radius:20px;
+font-size:25px;
+}
+.container {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .btn {
+  position: relative;
+  top:0;
+  left: 0;
+  width: 180px;
+  height: 30px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(7, 245, 51, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 0px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+  letter-spacing: 3px;
+}
+.container .btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+.container .btn:hover a::before {
+  transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.container .btn:hover::before /*lightup button*/ {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.container .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.container .btn:hover::after /*lightup button*/ {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+.container .btn:nth-child(1)::before, /*chnage 1*/
+.container .btn:nth-child(1)::after {
+  background: #ff1f71;
+  box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
+    0 0 60px #ff1f71;
+}
+.container .btn:nth-child(2)::before, /* 2*/
+.container .btn:nth-child(2)::after {
+  background: #2db2ff;
+  box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+    0 0 60px #2db2ff;
+}
+.container .btn:nth-child(3)::before, /* 3*/
+.container .btn:nth-child(3)::after {
+  background: #1eff45;
+  box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+    0 0 60px #1eff45;
+}
+
+.box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: linear-gradient(to bottom, #0e0e0f, #080808); 
+}
+
+
+</style>
+</head>
+<body>
+    <div class="box">
+    <center>
+<div class="padding">
+<div class="container">
+  <div class="btn"><a class="button" href="/about" style="--color:#1e9bff;">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Home
+  </a>
+  </div>
+  <div class="btn"><a class="button" href="/info" style="--color: #ff1867;">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Info
+  </a>
+  </div>
+  <div class="btn"><a class="button" href="/upload" style="--color: #6eff3e;">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Predict
+  </a>
+</div>  
+</div>
+</center>
+</div>
+<br>
+</div>
+<center>
+  
+<h1>ECG- Image Based Heartbeat Classification Application For Arrhythmia Detection</h1>
+</center>
+<div class="hello">
+<h2><u><center>ECG arrhythmia classification using CNN</center></u></h2>
+</div>
+
+
+<div class="container-sm">
+<br>
+<center><i><b>
+According to the World Health Organization (WHO), cardiovascular diseases (CVDs) are the
+number one cause of death today. Over 17.7 million people died from CVDs in the year 2017
+all over the world which is about 31% of all deaths, and over 75% of these deaths occur in
+low and middle income countries. Arrhythmia is a representative type of CVD that refers to
+any irregular change from the normal heart rhythms. There are several types of arrhythmia
+including atrial fibrillation, premature contraction, ventricular fibrillation, and tachycardia.
+Although single arrhythmia heartbeat may not have a serious impact on life, continuous
+arrhythmia beats can result in fatal circumstances.Electrocardiogram (ECG) is a non-invasive medical tool that displays the rhythm and status
+of the heart. Therefore, automatic detection of irregular heart rhythms from ECG signals is a
+significant task in the field of cardiology.
+A heart arrhythmia (uh-RITH-me-uh) is an irregular heartbeat. Heart rhythm problems (heart arrhythmias) occur when the electrical signals that coordinate the heart's beats don't work properly. The faulty signaling causes the heart to beat too fast (tachycardia), too slow (bradycardia) or irregularly.
+
+Heart arrhythmias may feel like a fluttering or racing heart and may be harmless. However, some heart arrhythmias may cause bothersome — sometimes even life-threatening — signs and symptoms.
+
+However, sometimes it's normal for a person to have a fast or slow heart rate. For example, the heart rate may increase with exercise or slow down during sleep.
+
+Heart arrhythmia treatment may include medications, catheter procedures, implanted devices or surgery to control or eliminate fast, slow or irregular heartbeats. A heart-healthy lifestyle can help prevent heart damage that can trigger certain heart arrhythmias.</b></i>
+<br><br>    
+<div class="container-sm">
+<img src="static/heart.jpg" height=50% width=50%></img>
+
+</center>
+</div>
+</body>
+</html>
